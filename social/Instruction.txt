@@ -1,0 +1,48 @@
+API pro sociální média - Návod k použití
+
+Vítejte v našem API pro sociální média! Následující instrukce vám poskytnou přehled o funkcích a možnostech, které naše API nabízí, a jak je používat.
+
+1. Získání seznamu příspěvků (GET):
+   - Pro získání seznamu všech příspěvků použijte GET požadavek na URL: /api/posts
+   - Volitelně můžete použít parametry query stringu pro filtrování a řazení příspěvků.
+
+2. Získání konkrétního příspěvku (GET):
+   - Pro získání konkrétního příspěvku použijte GET požadavek na URL: /api/posts/{id}
+   - Nahraďte {id} identifikátorem příspěvku.
+
+3. Vytvoření nového příspěvku (POST):
+   - Pro vytvoření nového příspěvku použijte POST požadavek na URL: /api/posts
+   - V těle požadavku specifikujte následující parametry:
+     - Text: Text příspěvku (povinný parametr).
+     - ImageUrl (volitelný): Odkaz na obrázek příspěvku.
+     - Link (volitelný): Odkaz na webovou stránku související s příspěvkem.
+
+4. Aktualizace příspěvku (PUT):
+   - Pro aktualizaci příspěvku použijte PUT požadavek na URL: /api/posts/{id}
+   - Nahraďte {id} identifikátorem příspěvku.
+   - V těle požadavku specifikujte následující parametry:
+     - Text: Nový text příspěvku (povinný parametr).
+     - ImageUrl (volitelný): Nový odkaz na obrázek příspěvku.
+     - Link (volitelný): Nový odkaz na webovou stránku související s příspěvkem.
+
+5. Smazání příspěvku (DELETE):
+   - Pro smazání příspěvku použijte DELETE požadavek na URL: /api/posts/{id}
+   - Nahraďte {id} identifikátorem příspěvku.
+
+6. Přidání reakce k příspěvku (POST):
+   - Pro přidání reakce k příspěvku použijte POST požadavek na URL: /api/posts/{id}/reactions
+   - Nahraďte {id} identifikátorem příspěvku.
+   - V těle požadavku specifikujte text reakce.
+
+7. Přidání komentáře k příspěvku (POST):
+   - Pro přidání komentáře k příspěvku použijte POST požadavek na URL: /api/posts/{id}/comments
+   - Nahraďte {id} identifikátorem příspěvku.
+   - V těle požadavku specifikujte následující parametry:
+     - Text: Text komentáře (povinný parametr).
+
+8. Získání konkrétního komentáře k příspěvku (GET):
+   - Pro získání konkrétního komentáře k příspěvku použijte GET požadavek na URL: /api/posts/{postId}/comments/{commentId}
+   - Nahraďte {postId} identifikátorem příspěvku a {commentId} identifikátorem komentáře.
+
+Toto jsou základní instrukce pro použití našeho API pro sociální média. Pamatujte, že API je chráněno autentizací pomocí JWT tokenů. Před použitím API se ujistěte, že jste autentizováni a máte přístupový token.
+
